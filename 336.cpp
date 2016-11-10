@@ -1,3 +1,10 @@
+/**
+Author : Zubayer Rahman
+Email  : zubayer.csesust@gmail.com
+CPU    : 0.020s
+Memory : 
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
