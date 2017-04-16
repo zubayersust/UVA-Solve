@@ -5,9 +5,7 @@ CPU    : 0.00s
 Memory : 
 */
 
-#include<stdio.h>
-#include<iostream>
-#include<algorithm>
+#include<bits/stdc++.h>
 
 #define maxBlock 105
 
