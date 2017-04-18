@@ -110,6 +110,8 @@ int main()
         if(consistent)
             printf("YES\n");
         else printf("NO\n");
+        
+        reset(root);
     }
     return 0;
 }
