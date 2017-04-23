@@ -1,8 +1,9 @@
 /**
-Author : Zubayer Rahman
-Email  : zubayer.csesust@gmail.com
-CPU    : 0.220s
-Memory : 
+Author    : Zubayer Rahman
+Email     : zubayer.csesust@gmail.com
+CPU       : 0.220s
+Memory    :
+Algorithm : Trie
 */
 
 #include<bits/stdc++.h>
