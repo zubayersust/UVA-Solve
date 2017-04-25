@@ -6,7 +6,6 @@ Memory    :
 Algorithm : Articulation Point/Bridge
 */
 
-
 #include<bits/stdc++.h>
 
 #define MAX_NODES 100
