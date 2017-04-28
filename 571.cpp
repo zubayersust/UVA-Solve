@@ -1,7 +1,7 @@
 /**
 Author    : Zubayer Rahman
 Email     : zubayer.csesust@gmail.com
-CPU       : 0.050s
+CPU       : 0.030s
 Memory    : 
 Algorithm : BFS
 */
