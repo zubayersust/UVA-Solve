@@ -1,12 +1,12 @@
 /**
-Online Judge : SPOJ
-Problem No   : 10798
-Problem Name : WACHOVIA - Wachovia Bank
+Online Judge : UVA Online Judge
+Problem No   : 10611
+Problem Name : The Playboy Chimp
 Author       : Zubayer Rahman
 Email        : zubayer.csesust@gmail.com
-CPU          : 0.02s
-Memory       : 2.9M
-Algorithm    : 0/1 Knapsack
+CPU          : 0.01s
+Memory       : 
+Algorithm    : Binary Search
 */
 
 #include<bits/stdc++.h>
