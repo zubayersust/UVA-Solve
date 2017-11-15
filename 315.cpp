@@ -1,9 +1,12 @@
 /**
-Author    : Zubayer Rahman
-Email     : zubayer.csesust@gmail.com
-CPU       : 0.000s
-Memory    :
-Algorithm : Articulation Point/Bridge
+Online Judge : UVA Online Judge
+Problem No   : 315
+Problem Name : Network
+Author       : Zubayer Rahman
+Email        : zubayer.csesust@gmail.com
+CPU          : 0.000s
+Memory       :
+Algorithm    : Articulation Point/Bridge
 */
 
 #include<bits/stdc++.h>
