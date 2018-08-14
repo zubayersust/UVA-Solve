@@ -4,6 +4,7 @@ Problem No   : 315
 Problem Name : Network
 Author       : Zubayer Rahman
 Email        : zubayer.csesust@gmail.com
+Time Limit   : 3.000s
 CPU          : 0.000s
 Memory       :
 Algorithm    : Articulation Point/Bridge
