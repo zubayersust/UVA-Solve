@@ -1,9 +1,13 @@
 /**
-Author    : Zubayer Rahman
-Email     : zubayer.csesust@gmail.com
-CPU       : 0.000s
-Memory    : 
-Algorithm : BFS
+Online Judge : UVA Online Judge
+Problem No   : 924
+Problem Name : Spreading The News
+Author       : Zubayer Rahman
+Email        : zubayer.csesust@gmail.com
+Time Limit   : 3.000s
+CPU          : 0.000s
+Memory       :
+Algorithm    : BFS
 */
 
 #include<bits/stdc++.h>
@@ -131,7 +135,8 @@ int main()
 
             if(data.boom_size == 0)
                 printf("0\n");
-            else printf("%d %d\n", data.boom_size,data.day);
+            else
+                printf("%d %d\n", data.boom_size,data.day);
 
             memset(visited,0,sizeof(visited));
             memset(day,0,sizeof(day));
