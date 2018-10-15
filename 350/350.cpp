@@ -4,6 +4,7 @@ Problem No   : 350
 Problem Name : Pseudo-Random Numbers
 Author       : Zubayer Rahman
 Email        : zubayer.csesust@gmail.com
+Time Limit   : 3.000s
 CPU          : 0.05s
 Memory       :
 Algorithm    : Floyd Cycle Finding

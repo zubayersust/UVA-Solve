@@ -4,8 +4,9 @@ Problem No   : 10611
 Problem Name : The Playboy Chimp
 Author       : Zubayer Rahman
 Email        : zubayer.csesust@gmail.com
+Time Limit   : 3.000s
 CPU          : 0.01s
-Memory       : 
+Memory       :
 Algorithm    : Binary Search
 */
 
@@ -90,7 +91,8 @@ int main()
                         printf("X %d\n",ara[r_pos]);
                     else if(l_pos>=0 && r_pos==n)
                         printf("%d X\n",ara[l_pos]);
-                    else printf("X X\n");
+                    else
+                        printf("X X\n");
                 }
             }
         }
