@@ -5,6 +5,7 @@
 !*/
 
 # Except Files
+!*.txt
 !*.c
 !*.cpp
 !*.py
