@@ -1,4 +1,8 @@
-# Files
-/*
-!/.c
-!/.cpp
+# Everything
+*
+
+# Except
+!*.c
+!*.cpp
+!.gitignore
+!README.md
