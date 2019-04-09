@@ -1,2 +1,4 @@
 # Files
-*.pdf
+*
+!*.c
+!*.cpp
