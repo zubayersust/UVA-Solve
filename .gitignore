@@ -1,8 +1,10 @@
 # Everything
 *
 
-# Except
+# Except Folders
+!*/
+
+# Except Files
 !*.c
 !*.cpp
-!.gitignore
-!README.md
+!*.py
