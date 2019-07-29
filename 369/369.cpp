@@ -1,9 +1,13 @@
 /**
-Author    : Zubayer Rahman
-Email     : zubayer.csesust@gmail.com
-CPU       : 0.013s
-Memory    :
-Algorithm : Combinatorics
+Online Judge : UVA Online Judge
+Problem No   : 369
+Problem Name : Combinations
+Author       : Zubayer Rahman
+Email        : zubayer.csesust@gmail.com
+Time Limit   : 3.000s
+CPU          : 0.013s
+Memory       :
+Algorithm    : Combinatorics
 */
 
 #include<bits/stdc++.h>
