@@ -1,9 +1,13 @@
 /**
-Author    : Zubayer Rahman
-Email     : zubayer.csesust@gmail.com
-CPU       : 0.050s
-Memory    : 
-Algorithm : BFS
+Online Judge : UVA Online Judge
+Problem No   : 10067
+Problem Name : Playing with Wheels
+Author       : Zubayer Rahman
+Email        : zubayer.csesust@gmail.com
+Time Limit   : 5.000s
+CPU          : 0.050s
+Memory       :
+Algorithm    : BFS
 */
 
 #include<bits/stdc++.h>
