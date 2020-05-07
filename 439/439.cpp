@@ -1,8 +1,13 @@
 /**
-Author : Zubayer Rahman
-Email  : zubayer.csesust@gmail.com
-CPU    : 0.182s
-Memory : 
+Online Judge : UVA Online Judge
+Problem No   : 439
+Problem Name : Knight Moves
+Author       : Zubayer Rahman
+Email        : zubayer.csesust@gmail.com
+Time Limit   : 3.000s
+CPU          : 0.182s
+Memory       :
+Algorithm    : BFS
 */
 
 #include<bits/stdc++.h>
@@ -49,6 +54,10 @@ int dz[] = {+1,-1};
 
 int main()
 {
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+#endif // ONLINE_JUDGE
+
     string s1,s2;
 
     while(cin>>s1)
@@ -108,7 +117,9 @@ int main()
                 }
             }
         }
+
         int temp=a[desx][desy].l;
+
         cout<<"To get from "<<s1<<" to "<<s2<<" takes "<<temp<<" knight moves."<<endl;
     }
     return 0;
