@@ -1,25 +1,23 @@
 /**
-Author : Zubayer Rahman
-Email  : zubayer.csesust@gmail.com
-CPU    : 0.00s
-Memory : 
+Online Judge : UVA Online Judge
+Problem No   : 383
+Problem Name : Shipping Routes
+Author       : Zubayer Rahman
+Email        : zubayer.csesust@gmail.com
+Time Limit   : 3.000s
+CPU          : 0.000s
+Memory       :
+Algorithm    : BFS
 */
 
-#include<stdio.h>
-#include<string.h>
-#include<iostream>
-#include<string>
-#include<vector>
-#include<map>
-#include<queue>
-#include<algorithm>
+#include<bits/stdc++.h>
 
 #define MAX_HOUSE 35
 
 using namespace std;
 
-int testCase,caseNum=1;
-int M,N,P;
+int testCase, caseNum=1;
+int M, N, P;
 int dis[MAX_HOUSE];
 bool visited[MAX_HOUSE];
 
@@ -32,7 +30,6 @@ void reset()
     mp.clear();
 
     int i;
-
     for(i=0; i<MAX_HOUSE; i++)
         vec[i].clear();
 }
@@ -40,7 +37,6 @@ void reset()
 void reset2()
 {
     int i;
-
     for(i=0; i<MAX_HOUSE; i++)
     {
         dis[i]=0;
@@ -54,7 +50,7 @@ void BFS(int src)
     visited[src]=true;
     Q.push(src);
 
-    int u,v;
+    int u, v;
     int i;
 
     while(!Q.empty())
