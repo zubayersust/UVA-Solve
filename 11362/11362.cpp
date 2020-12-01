@@ -1,9 +1,13 @@
 /**
-Author    : Zubayer Rahman
-Email     : zubayer.csesust@gmail.com
-CPU       : 0.220s
-Memory    :
-Algorithm : Trie
+Online Judge : UVA Online Judge
+Problem No   : 11362
+Problem Name : Phone List
+Author       : Zubayer Rahman
+Email        : zubayer.csesust@gmail.com
+Time Limit   : 5.000s
+CPU          : 0.190s
+Memory       :
+Algorithm    : Trie
 */
 
 #include<bits/stdc++.h>
@@ -27,9 +31,7 @@ public:
     {
         word = false;
 
-        int i;
-
-        for(i=0; i<10; i++)
+        for(int i=0; i<10; i++)
             next[i] = NULL;
     }
 };
@@ -41,9 +43,7 @@ void Insert(string s, int len)
 {
     Node *current_node = root;
 
-    int i;
-
-    for(i=0; i<len; i++)
+    for(int i=0; i<len; i++)
     {
         int id = s.at(i) - '0';
 
@@ -54,7 +54,12 @@ void Insert(string s, int len)
             current_node = current_node->next[id];
 
             if(current_node->word)
+            {
                 consistent = false;
+
+                return;
+            }
+
             continue;
         }
 
@@ -111,7 +116,7 @@ int main()
         if(consistent)
             printf("YES\n");
         else printf("NO\n");
-        
+
         reset(root);
     }
     return 0;
