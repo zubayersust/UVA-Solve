@@ -44,7 +44,7 @@ void DFS2(int node)
     visited[node] = 1;
     for(auto child : v[node])
         if(visited[child] == 0)
-            DFS(child);
+            DFS2(child);
 }
 
 int main()
