@@ -5,7 +5,7 @@ Problem Name : Euclid Problem
 Author       : Zubayer Rahman
 Email        : zubayer.csesust@gmail.com
 Time Limit   : 3.000s
-CPU          : 0.010s
+CPU          : 0.070s
 Memory       :
 Algorithm    : Extended Euclid
 */
