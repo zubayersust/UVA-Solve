@@ -5,87 +5,64 @@ Problem Name : A Node Too Far
 Author       : Zubayer Rahman
 Email        : zubayer.csesust@gmail.com
 Time Limit   : 3.000s
-CPU          : 0.020s
+CPU          : 0.050s
 Memory       :
 Algorithm    : BFS
 */
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<iostream>
-#include<string>
-#include<vector>
-#include<map>
-#include<queue>
-#include<algorithm>
+#include<bits/stdc++.h>
 
 using namespace std;
 
-vector<int> vec[50];
-map<int,int> mp;
+#define MAX_NODES 30
 
-struct data
-{
-    int x;
-    int value;
-    int visit;
-
-    data(int x,int value,int visit)
-    {
-        this->x=x;
-        this->value=value;
-        this->visit=visit;
-    }
-    data() {}
-};
-
-data ara[50];
-
-queue<data> Q;
+vector<int> vec[MAX_NODES + 1];
+vector<int> visited(MAX_NODES + 1);
+vector<int> value(MAX_NODES + 1);
+map<int, int> mp;
+queue<int> Q;
 
 void reset()
 {
-    for(int i=0; i<50; i++)
+    for(int i = 0; i < MAX_NODES + 1; i++)
     {
-        ara[i].x=i;
-        ara[i].value=0;
-        ara[i].visit=0;
+        visited[i] = 0;
+        value[i] = 0;
     }
 }
 
-int bfs(int a,int b,int n)
+int bfs(int a, int b, int n)
 {
-    int h=0,result;
+    int h = 0, result;
 
-    ara[a].visit=1;
-    data m(a,0,1);
-    Q.push(m);
+    visited[a] = 1;
+    value[a] = 0;
+    Q.push(a);
 
     while(!Q.empty())
     {
-        data f=Q.front();
+        int node_x = Q.front();
         Q.pop();
 
-        a=f.x;
-        int c=f.value,len=vec[a].size();
+        int val = value[node_x], len = vec[node_x].size();
 
-        for(int i=0; i<len; i++)
+        for(int i = 0; i < len; i++)
         {
-            int d=vec[a][i];
-            if(ara[d].visit==0)
+            int node_y = vec[node_x][i];
+
+            if(visited[node_y] == 0)
             {
-                ara[d].value=c+1;
-                if(ara[d].value<=b)
-                    h++;
-                ara[d].visit=1;
-                Q.push(data(d,ara[d].value,1));
+                value[node_y] = val + 1;
+
+                if(value[node_y] <= b) h++;
+
+                visited[node_y] = 1;
+                Q.push(node_y);
             }
         }
     }
 
-    result = n-h-1;
-    return result;
+    return n - h - 1;
 }
 
 int main()
@@ -94,32 +71,34 @@ int main()
     freopen("input.txt", "r", stdin);
 #endif // ONLINE_JUDGE
 
-    int connection,a,b,p=1,sn,ttl,fresult;
+    int connection, a, b, p = 1, sn, ttl, result;
 
-    while(scanf("%d", &connection)==1)
+    while(scanf("%d", &connection) == 1)
     {
-        if(connection==0)
+        if(connection == 0)
             return 0;
 
-        int temp=0,x,y,node=0;
+        int temp = 0, x, y, node = 0;
 
-        for(int i=0; i<connection; i++)
+        for(int i = 0; i < connection; i++)
         {
             scanf("%d %d", &a, &b);
 
-            if(mp[a]==0)
+            if(mp[a] == 0)
             {
-                mp[a]=++temp;
-                node++;
-            }
-            if(mp[b]==0)
-            {
-                mp[b]=++temp;
+                mp[a] = ++temp;
                 node++;
             }
 
-            x=mp[a];
-            y=mp[b];
+            if(mp[b] == 0)
+            {
+                mp[b] = ++temp;
+                node++;
+            }
+
+            x = mp[a];
+            y = mp[b];
+
             vec[x].push_back(y);
             vec[y].push_back(x);
         }
@@ -130,17 +109,16 @@ int main()
 
             reset();
 
-            if(sn==0 && ttl==0)
+            if(sn == 0 && ttl == 0)
                 break;
 
-            int snn=mp[sn];
-            fresult=bfs(snn,ttl,node);
+            int snn = mp[sn];
+            result = bfs(snn, ttl, node);
 
-            printf("Case %d: %d nodes not reachable from node %d with TTL = %d.\n",p++,fresult,sn,ttl);
+            printf("Case %d: %d nodes not reachable from node %d with TTL = %d.\n", p++, result, sn, ttl);
         }
 
-        for(int i=0; i<=35; i++)
-            vec[i].clear();
+        for(int i = 0; i < MAX_NODES + 1; i++) vec[i].clear();
         mp.clear();
     }
 
